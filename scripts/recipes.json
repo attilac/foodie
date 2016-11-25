@@ -1,0 +1,702 @@
+var recipeData = [
+    {
+        "description": "F\u00e4rdiggrillad kyckling, jordn\u00f6tter, knaperstekt bacon, chilis\u00e5s, gr\u00e4dde och bananer i en oslagbar kombination. Flygande Jacob \u00e4r en riktig klassiker!",
+        "isVeg": false,
+        "thumbnail": "flygande-jakob.jpg",
+        "title": "Flygande Jacob",
+        "url": "http://www.koket.se/pelle-johansson/gratang/kyckling-och-fagel/flygande-jacob/"
+    },
+    {
+        "description": "En len currys\u00e5s passar bra att servera till kycklingfil\u00e9. Det \u00e4r inte sv\u00e5rt alls att g\u00f6ra den sj\u00e4lv \u2013 prova!",
+        "isVeg": false,
+        "thumbnail": "kycklingfile-med-currysas.jpg",
+        "title": "Kycklingfil\u00e9 med currys\u00e5s",
+        "url": "http://www.koket.se/kycklingfile-med-currysas"
+    },
+    {
+        "description": "Kr\u00e4mig kycklingpanna med dragon, senap och vitl\u00f6k. Enkel vardagsmat!",
+        "isVeg": false,
+        "thumbnail": "dragonkyckling-med-ris.jpg",
+        "title": "Dragonkyckling med ris",
+        "url": "http://www.koket.se/dragonkyckling-med-ris"
+    },
+    {
+        "description": "Enkel, ugnsgratinerad kyckling med smak av paprika och tomat.\u00a0Recept ur boken LCHF f\u00f6r kvinnor. Perfekt till middag en vanlig vardag! Gr\u00e4dde, tomatpur\u00e9 och ajvar relish (kryddig paprikar\u00f6ra) \u00e4r bra basvaror att ha hemma. Tomaterna kan bytas mot r\u00f6d eller gul paprika. Servera g\u00e4rna med blomk\u00e5lsris och en god sallad.",
+        "isVeg": false,
+        "thumbnail": "kyckling-i-form.jpg",
+        "title": "Kyckling i form",
+        "url": "http://www.koket.se/lchf-for-kvinnor/anna-hallen/kyckling-i-form/"
+    },
+    {
+        "description": "Kryddig kycklingkebab som \u00e4r busenkel att g\u00f6ra. Serveras i pitabr\u00f6d tillsammans med b\u00e5de vit och r\u00f6d s\u00e5s.",
+        "isVeg": false,
+        "thumbnail": "kycklingkebab-med-pitabrod.jpg",
+        "title": "Kycklingkebab med pitabr\u00f6d",
+        "url": "http://www.koket.se/kycklingkebab-med-pitabrod"
+    },
+    {
+        "description": "Kyckling g\u00e5r att variera i det o\u00e4ndliga. H\u00e4r \u00e4r en thaiinspirerad variant med r\u00f6d curry och kokosmj\u00f6lk.",
+        "isVeg": false,
+        "thumbnail": "kyckling-i-rod-curry.jpg",
+        "title": "Kyckling i r\u00f6d curry",
+        "url": "http://www.koket.se/melker_andersson/soppor_och_grytor/kyckling_och_fagel/kyckling_i_rod_curry/"
+    },
+    {
+        "description": "En klassiker i det franska k\u00f6ket.",
+        "isVeg": false,
+        "thumbnail": "per-morbergs-coq-au-vin.jpg",
+        "title": "Per Morbergs Coq au vin",
+        "url": "http://www.koket.se/per_morberg/varmratter/kyckling_och_fagel/per_morbergs_coq_au_vin/"
+    },
+    {
+        "description": "Pasta kyckling Alfredo p\u00e5 grillad kyckling och massor av vitl\u00f6k. L\u00e5t pastan koka i sin egen pastas\u00e5s s\u00e5 blir middagen snabb, enkel och kr\u00e4migt god!\u00a0",
+        "isVeg": false,
+        "thumbnail": "one-pot-kyckling-alfredo.jpg",
+        "title": "One pot kyckling alfredo",
+        "url": "http://www.koket.se/one-pot-kyckling-alfredo"
+    },
+    {
+        "description": "Alla barns \u00e4lsklingsr\u00e4tt! G\u00f6r en stor sats och frys in i sm\u00e5portioner. Passar perfekt som utflyktsmat eftersom den \u00e4r lika god kall som varm. /Ulrika Davidsson",
+        "isVeg": false,
+        "thumbnail": "mammas-goda-spagettigratang.jpg",
+        "title": "Mammas goda spagettigrat\u00e4ng",
+        "url": "http://www.koket.se/ulrika-davidsson/varmratter/pasta-nudlar/mammas-goda-spagettigratang/"
+    },
+    {
+        "description": "Grillad kyckling i favoritkombination med curry, banan, jordn\u00f6tter, chilis\u00e5s och gr\u00e4dde. Flygande Jakob var en kapten med stil i k\u00f6ket. Servera med kokt ris.",
+        "isVeg": false,
+        "thumbnail": "flygande-jakob-2.jpg",
+        "title": "Charlottas flygande Jakob",
+        "url": "http://www.koket.se/charlotta_malhotra/huvudratter/kyckling_och_fagel/flygande_jakob/"
+    },
+    {
+        "description": "...eller \"Pollo in casseruola con pomodorini, sedano, erbe, limone e pecorino\" som Paolo skulle s\u00e4ga. Kycklinggryta med tomat, chili, r\u00f6tt vin, massor h\u00e4rliga kryddor och smulad pecorinoost. Serveras med ris.",
+        "isVeg": false,
+        "thumbnail": "toscansk-kycklinggryta.jpg",
+        "title": "Toscansk kycklinggryta",
+        "url": "http://www.koket.se/toscansk-kycklinggryta"
+    },
+    {
+        "description": "En wok p\u00e5 kycklingfil\u00e9, krispiga gr\u00f6nsaker och cashewn\u00f6tter. Receptet kommer fr\u00e5n boken Monica Eisenmans asiatiska nudlar och sm\u00e5r\u00e4tter.",
+        "isVeg": false,
+        "thumbnail": "nystart-med-2-sunda-veckor.jpg",
+        "title": "Snabb kyckling- och gr\u00f6nsakswok",
+        "url": "http://www.koket.se/monica-eisenmans-asiatiska-nudlar-och-smaratter/monica-eisenman/snabb-kyckling--och-gronsakswok/"
+    },
+    {
+        "description": "Kycklingfil\u00e9 med thail\u00e4ndska smaker. Serveras med gr\u00f6nt, r\u00e5ris och cashewn\u00f6tter.",
+        "isVeg": false,
+        "thumbnail": "thaikyckling.jpg",
+        "title": "Thaikyckling med kokosmj\u00f6lk och gr\u00f6nt",
+        "url": "http://www.koket.se/ulrika-davidsson/varmratter/kyckling-och-fagel/thaikyckling-med-kokosmjolk-och-gront/"
+    },
+    {
+        "description": "Har du inte alla ingredienser hemma till denna kycklinggryta s\u00e5 improvisera eller anv\u00e4nd bara gr\u00f6n curry paste och kokosmj\u00f6lk. Vill du smaks\u00e4tta riset s\u00e5 anv\u00e4nd r\u00f6d paprika eller kajennpeppar.",
+        "isVeg": false,
+        "thumbnail": "thai-kycklinggryta-med-kokosmjolk.jpg",
+        "title": "Thai kycklinggryta med kokosmj\u00f6lk",
+        "url": "http://www.koket.se/thai-kycklinggryta-med-kokosmjolk"
+    },
+    {
+        "description": "Kycklingfajitas med egen kryddblandning, smarrig guacamole och en urgod tomatsalsa med lime.",
+        "isVeg": false,
+        "thumbnail": "kycklingfajitas.jpg",
+        "title": "Kycklingfajitas",
+        "url": "http://www.koket.se/mitt-kok/jennie-wallden/kycklingfajitas/"
+    },
+    {
+        "description": "Sveriges yngsta m\u00e4sterkock 2016 Signes recept p\u00e5 en riktigt god kycklinggryta med gr\u00f6n curry och kokosmj\u00f6lk.",
+        "isVeg": false,
+        "thumbnail": "tom-kha-gai-signes-thaikycklingsoppa.jpg",
+        "title": "Tom Kha Gai \u2013 Signes thaikycklingsoppa",
+        "url": "http://www.koket.se/tom-kha-gai-signes-thaikycklingsoppa"
+    },
+    {
+        "description": "Nyttig, f\u00e4rg- och smakstark kyckling med sm\u00e4lt ost och\n        tortillabr\u00f6d p\u00e5 mexikanskt vis.",
+        "isVeg": false,
+        "thumbnail": "quesadillas-med-kyckling-och-mozzarella.jpg",
+        "title": "Quesadillas med kyckling och mozzarella",
+        "url": "http://www.koket.se/quesadillas-med-kyckling-och-mozzarella"
+    },
+    {
+        "description": "Kycklingfil\u00e9er i kryddig marinad som ugnsrostas tillsammans med tomater p\u00e5 kvist samt skivad zucchini. Enkel och h\u00e4lsosam vardagsmat!",
+        "isVeg": false,
+        "thumbnail": "kyckling-med-marockansk-chermoula.jpg",
+        "title": "Kyckling med marockansk chermoula",
+        "url": "http://www.koket.se/kyckling-med-marockansk-chermoula"
+    },
+    {
+        "description": "Det s\u00e4gs att den h\u00e4r kryddiga, indiska r\u00e4tten fr\u00e5n b\u00f6rjan faktiskt uppfanns i England. Servera den med nykokt basmatiris, naanbr\u00f6d och den friskt myntasmakande Raitan!",
+        "isVeg": false,
+        "thumbnail": "chicken-tikka-masala.jpg",
+        "title": "Chicken tikka masala",
+        "url": "http://www.koket.se/stefan_svensson/varmratter/kyckling_och_fagel/chicken_tikka_masala/"
+    },
+    {
+        "description": "Kyckling i ugn med rostade gr\u00f6nsaker och r\u00f6ra p\u00e5 fetaost och turkisk yoghurt. Nyttigt och gott till middag! Kycklingen ska g\u00e4rna marinera ett tag men kan \u00e4ven lagas direkt. Recept fr\u00e5n boken LCHQ.",
+        "isVeg": false,
+        "thumbnail": "citronkyckling-i-ugn-med-gronsaker-och-fetaostrora.jpg",
+        "title": "Citronkyckling i ugn med gr\u00f6nsaker och fetaostr\u00f6ra",
+        "url": "http://www.koket.se/lchq/fredrik-paulun/citronkyckling-i-ugn-med-gronsaker-och-fetaostrora/"
+    },
+    {
+        "description": "En riktig lyxig vegetarisk stroganoff med tofu, ajvar och ramsl\u00f6ksolja!",
+        "isVeg": true,
+        "thumbnail": "kung-markatta-tofu-stroganoff.jpg",
+        "title": "Tofustroganoff med ramsl\u00f6kolja",
+        "url": "http://www.koket.se/tofustroganoff-med-ramslokolja"
+    },
+    {
+        "description": "En helt vegetarisk gryta med massor av smak!",
+        "isVeg": true,
+        "thumbnail": "indiskt-och-vegetariskt.jpg",
+        "title": "Indisk gryta",
+        "url": "http://www.koket.se/krake_lithander/soppor_och_grytor/gronsaker__potatis_och_andra_rotfrukter/indisk_gryta/"
+    },
+    {
+        "description": "Strunta i att kladda med pizzadeg och anv\u00e4nd tortillabr\u00f6d\n        ist\u00e4llet. Det h\u00e4r blir en snabb och enkel lunch eller middag.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-pizza.jpg",
+        "title": "Vegetarisk pizza",
+        "url": "http://www.koket.se/anders_dahlbom/huvudratter/gronsaker/vegetarisk_pizza/"
+    },
+    {
+        "description": "Den h\u00e4r vegetariska pastan \u00e4r n\u00e5got extra. Med rostade\n        kron\u00e4rtskockor, s\u00f6ta tomater, babyzuccini och basilikaskum blir det\n        inget annat \u00e4n en succ\u00e9.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-pasta.jpg",
+        "title": "Vegetarisk pasta",
+        "url": "http://www.koket.se/vegetarisk-pasta"
+    },
+    {
+        "description": "En god och matig vegetarisk gryta p\u00e5 kik\u00e4rtor och squash med fr\u00e4sch kesor\u00f6ra.",
+        "isVeg": true,
+        "thumbnail": "vegogryta-med-keso-och-gremolata.jpg",
+        "title": "Vegogryta med keso och gremolata",
+        "url": "http://www.koket.se/forkvall/pelle-johansson/vegogryta-med-keso-och-gremolata/"
+    },
+    {
+        "description": "Allt g\u00e5r att blanda ner i en pytt. Ta vad du har, men tillbeh\u00f6ren inlagda r\u00f6dbetor\u00a0och stekt \u00e4gg \u00e4r ett m\u00e5ste. /Per",
+        "isVeg": true,
+        "thumbnail": "gron-pyttipanna.jpg",
+        "title": "Gr\u00f6n pyttipanna",
+        "url": "http://www.koket.se/gron-pyttipanna"
+    },
+    {
+        "description": "Min farmor var en riktig bondmor med\u00a0m\u00e5nga barn och en hel g\u00e5rd att sk\u00f6ta, och\u00a0hon fick nog trolla lite i k\u00f6ket f\u00f6r att f\u00e5\u00a0det hela att g\u00e5 ihop. \u00c4n i dag talas det om\u00a0hennes falska fisk. Detta p\u00e5fund \u00e4r n\u00e5got s\u00e5\u00a0lurigt som en slags stekt mannagrynsgr\u00f6t\u00a0med l\u00f6k i paneringen. F\u00f6r extra frasighet\u00a0har jag valt att anv\u00e4nda panko i st\u00e4llet f\u00f6r\u00a0str\u00f6br\u00f6d till panering. Dessutom l\u00e4gger\u00a0jag till lite chips. /Karoline",
+        "isVeg": true,
+        "thumbnail": "farmors-falska-fish-n-chips.jpg",
+        "title": "Farmors falska fish n' chips",
+        "url": "http://www.koket.se/farmors-falska-fish-n-chips"
+    },
+    {
+        "description": "Grat\u00e4nger \u00e4r bra tillbeh\u00f6r eller en hel r\u00e4tt i sig. Zucchini \u00e4r\n        nyttigt och gott och fungerar bra tillsammans med k\u00f6tt, fisk och\n        det vegetariska alternativet quorn.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Zucchinigrat\u00e4ng",
+        "url": "http://www.koket.se/gi_viktkoll/smaratter_och_tillbehor/gronsaker/zucchinigratang/"
+    },
+    {
+        "description": "Gott och smakrik vegetarisk middag. Gl\u00f6m inte att mungb\u00f6norna\n        m\u00e5ste ligga i bl\u00f6t minst 8 timmar innan de anv\u00e4nds. Receptet kommer\n        fr\u00e5n programmet Halv \u00e5tta hos mig i TV4, d\u00e4r glada amat\u00f6rer f\u00e5r\n        visa prov p\u00e5 sin matlagningskonst.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-tallrik-med-mungbonplattar-het-aubergine-och-chutney.jpg",
+        "title": "Vegetarisk tallrik med mungb\u00f6npl\u00e4ttar, het aubergine och chutney",
+        "url": "http://www.koket.se/rosemarie_geiss/vegetariskt/gronsaker__potatis_och_andra_rotfrukter/vegetarisk_tallrik_med_mungbonplattar__het_aubergine_och_chutney/"
+    },
+    {
+        "description": "Linsgryta som passar perfekt till vardaags, och dessutom\n        sp\u00e4rngfulld med nyttigheter.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Lyxig linsgryta med kokosmj\u00f6lk, basmatiris och broccoli",
+        "url": "http://www.koket.se/lina_geback/varmratter/gronsaker__potatis_och_andra_rotfrukter/lyxig_linsgryta_med_kokosmjolk__basmatiris_och_broccoli/"
+    },
+    {
+        "description": "Precis som det italienska originalet blir den h\u00e4r lasagnen bara\n        godare av att st\u00e5 till sig och sedan v\u00e4rmas upp p\u00e5 nytt, s\u00e5 laga\n        den g\u00e4rna en dag i f\u00f6rv\u00e4g. Gr\u00f6nsakss\u00e5sen blir h\u00e4rligt smakrik med\n        fint hackade gr\u00f6nsaker och en olivolja av h\u00f6g kvalitet. Osts\u00e5sen\n        ska vara tjock och kr\u00e4mig \u2013 h\u00e4r duger inga\n        viktv\u00e4ktaralternativ.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-gourmetlasagne.jpg",
+        "title": "Vegetarisk gourmetlasagne",
+        "url": "http://www.koket.se/vegetarisk-gourmetlasagne"
+    },
+    {
+        "description": "En apelsinsmakande salsa smakar gott till grillat. H\u00e4r serverar\n        vi den med quornburgare. Om du vill kan du servera br\u00f6d till.",
+        "isVeg": true,
+        "thumbnail": "quornburgare-med-bonsalsa.jpg",
+        "title": "Quornburgare med b\u00f6nsalsa",
+        "url": "http://www.koket.se/quornburgare-med-bonsalsa"
+    },
+    {
+        "description": "Kik\u00e4rtsbollar \u00e0 la Mellan\u00f6stern. Falafel \u00e4r vegetariskt och serveras ofta i pitabr\u00f6d.",
+        "isVeg": true,
+        "thumbnail": "falafel-med-harissa-eller-sambal-oelek.jpg",
+        "title": "Falafel med harissa eller sambal oelek",
+        "url": "http://www.koket.se/pelle-johansson/smaratter-tillbehor/artor-bonor-linser/falafel-med-harissa-eller-sambal-oelek/"
+    },
+    {
+        "description": "En h\u00e4rlig vegeatarisk grillbiff som kryddas med peppar och\n        serveras med en s\u00e5s p\u00e5 \u00e4pple och mynta. Mums!",
+        "isVeg": true,
+        "thumbnail": "jespers-pepparkryddade-quornbiff.jpg",
+        "title": "Jespers pepparkryddade quornbiff",
+        "url": "http://www.koket.se/gi-viktkoll/varmratter/gronsaker--potatis-och-andra-rotfrukter/jespers-pepparkryddade-quornbiff/"
+    },
+    {
+        "description": "Currysmakande GI-j\u00e4rpar med vitl\u00f6kssmakande br\u00f6d och \u00e4ppelsallad\n        med citron.",
+        "isVeg": true,
+        "thumbnail": "quornfarsspett-med-syrlig-appelsallad.jpg",
+        "title": "Quornf\u00e4rsspett med syrlig \u00e4ppelsallad",
+        "url": "http://www.koket.se/gi_viktkoll/huvudratter/gronsakeroch_184_potatis_och_andra_rotfrukter/quornfarsspett_med_syrlig_appelsallad/"
+    },
+    {
+        "description": "F\u00e4rska lasagneplattor \u00e4r en vardagsr\u00e4ddare i n\u00f6den. Ricotta \u00e4r\n        en italiensk f\u00e4rskost som ger lasagnen en h\u00e4rlig kr\u00e4mighet.",
+        "isVeg": true,
+        "thumbnail": "laga-latt-i-ugnen.jpg",
+        "title": "Snabb lasagne med ricotta, tomat, basilika",
+        "url": "http://www.koket.se/lisa_lemke/gratanger/pasta_och_nudlar/snabb_lasagne_med_ricotta__tomat__basilika/"
+    },
+    {
+        "description": "En snabblagad och nyttig vegetarisk wok med tofu, broccoli och\n        shitakesvamp. Recept fr\u00e5n boken LCHQ.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-wok-med-tofu.jpg",
+        "title": "Vegetarisk wok med tofu",
+        "url": "http://www.koket.se/lchq/fredrik-paulun/vegetarisk-wok-med-tofu/"
+    },
+    {
+        "description": "Tzatziki p\u00e5 rotselleri, gott tillbeh\u00f6r p\u00e5 mezetallriken.",
+        "isVeg": true,
+        "thumbnail": "yo-urtlu-kereviz.jpg",
+        "title": "Yo\u011furtlu kereviz",
+        "url": "http://www.koket.se/metin_-_stockholm/smaratter_och_tillbehor/gronsaker__potatis_och_andra_rotfrukter/yo_urtlu_kereviz/"
+    },
+    {
+        "description": "En klassiker i lakto-ovo-vegetarisk tappning! \"K\u00f6ttbullarna\" \u00e4r gjorda p\u00e5 n\u00f6tmj\u00f6l och svarta b\u00f6nor. Gott och m\u00e4ttande!",
+        "isVeg": true,
+        "thumbnail": "vegobullar-med-graddsas-och-potatis.jpg",
+        "title": "Vegetariska k\u00f6ttbullar med gr\u00e4dds\u00e5s och potatis",
+        "url": "http://www.koket.se/vegetariska-kottbullar-med-graddsas-och-potatis"
+    },
+    {
+        "description": "Pastagrat\u00e4ng med kik\u00e4rtspasta, aubergine och zucchini. Funkar lika bra som vardagsmat som bjudr\u00e4tt! Servera med en sallad och ringla \u00f6ver olivolja med citronzest f\u00f6r en lyxigare touch!",
+        "isVeg": true,
+        "thumbnail": "kung-markatta-kikartspastagratang.jpg",
+        "title": "Kik\u00e4rtspasta al forno",
+        "url": "http://www.koket.se/kikartspasta-al-forno"
+    },
+    {
+        "description": "Den h\u00e4r soppa \u00e4r perfekt som f\u00f6rr\u00e4tt eller tillbeh\u00f6r. Vanligast\n        \u00e4ts det i samband med sushi.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Miso-soppa",
+        "url": "http://www.koket.se/pelle_johansson/forratter/_/miso_soppa/"
+    },
+    {
+        "description": "S\u00e5 h\u00e4r v\u00e4ljer Per Moberg att tillaga sina kron\u00e4rtskockor.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Per Morbergs kron\u00e4rtskocka",
+        "url": "http://www.koket.se/per_morberg/smaratter_och_tillbehor/gronsaker/per_morbergs_kronartskocka/"
+    },
+    {
+        "description": "H\u00e4rligt GI-recept p\u00e5 gr\u00e4ddig quorn med r\u00e5ris och kokt\n        broccoli.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Quorn \u00e1 la King",
+        "url": "http://www.koket.se/gi_viktkoll/huvudratter/gronsaker/quorn_a_la_king/"
+    },
+    {
+        "description": "Inget fusk h\u00e4r inte! B\u00e5de lasagneplattorna, peston och\n        bechamels\u00e5sen g\u00f6r du sj\u00e4lv.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Vegetarisk lasagne",
+        "url": "http://www.koket.se/anders_leven/huvudratter/gronsaker/vegetarisk_lasagne/"
+    },
+    {
+        "description": "En riktigt smal men mycket l\u00e4cker vegetarisk lasagne f\u00f6r alla\n        som jagar kalorier. Servera den med vitk\u00e5lsallad.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-lasagne-med-kesella.jpg",
+        "title": "Vegetarisk lasagne med kesella",
+        "url": "http://www.koket.se/vegetarisk-lasagne-med-kesella"
+    },
+    {
+        "description": "Bjud p\u00e5 vegetarisk pizza! Den h\u00e4r varianten toppas med f\u00e4rska\n        rucolablad efter gr\u00e4ddningen.",
+        "isVeg": true,
+        "thumbnail": "pizza-verde.jpg",
+        "title": "Pizza verde",
+        "url": "http://www.koket.se/pizza-verde"
+    },
+    {
+        "description": "Den h\u00e4r curryn har fantastiska smaker - ingef\u00e4ra, vanilj, curry\n        och kardemumma f\u00f6r tankarna till Orienten. En riktigt annorlunda\n        s\u00f6ndagsmiddag med andra ord.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-curry.jpg",
+        "title": "Vegetarisk curry",
+        "url": "http://www.koket.se/krake_lithander/varmratter/gronsaker__potatis_och_andra_rotfrukter/vegetarisk_curry/"
+    },
+    {
+        "description": "En rej\u00e4l och m\u00e4ttande bolognese med r\u00f6dvin och svarta linser \u2013 en underbar\u00a0vardagsr\u00e4tt eller finfin bjudr\u00e4tt f\u00f6r alla \u00e5ldrar! Den funkar \u00e4ven med\u00a0r\u00f6da linser, men de svarta \u00e4r b\u00e4ttre. G\u00f6r g\u00e4rna storkok, det \u00e4r inte s\u00e5\u00a0mycket mer jobb n\u00e4r man \u00e4nd\u00e5 h\u00e5ller p\u00e5. \u00a0Variera efter vad som finns hemma. /Cecilia och Kristin",
+        "isVeg": true,
+        "thumbnail": "bolognese-pa-svarta-linser.jpg",
+        "title": "Bolognese p\u00e5 svarta linser",
+        "url": "http://www.koket.se/bolognese-pa-svarta-linser"
+    },
+    {
+        "description": "Den franska gr\u00f6nsaksr\u00f6ran ratatouille \u00e4r n\u00e5got av en\u00a0basf\u00f6da i mitt k\u00f6k. Jag g\u00f6r g\u00e4rna ett storkok och \u00e4ter\u00a0ratatouille flera dagar i rad, men varierar tillbeh\u00f6ren.",
+        "isVeg": true,
+        "thumbnail": "karolines-egenodlade-ratatouille.jpg",
+        "title": "Karolines egenodlade ratatouille",
+        "url": "http://www.koket.se/karolines-egenodlade-ratatouille"
+    },
+    {
+        "description": "En superl\u00e4cker r\u00e4tt som kommer fr\u00e5n det franska k\u00f6ket. Den\n        serveras ofta med lammstek, men passar till de flesta k\u00f6ttr\u00e4tter\n        och \u00e4ven till fisk. Grat\u00e4ngen passar fint p\u00e5 buff\u00e9bordet och\n        receptet kan dubbleras.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Zucchini, aubergine och tomat",
+        "url": "http://www.koket.se/gi_viktkoll/varmratter/gronsaker/zucchini__aubergine_och_tomat/1"
+    },
+    {
+        "description": "Tofu smakar inte s\u00e5 mycket i sig, men \u00e4r nyttig och anv\u00e4ndbar\n        till de flesta r\u00e4tter.",
+        "isVeg": true,
+        "thumbnail": "hemlagad-tofu.jpg",
+        "title": "Hemlagad tofu",
+        "url": "http://www.koket.se/stefano_catenacci/varmratter/gronsaker__potatis_och_andra_rotfrukter/hemlagad_tofu/"
+    },
+    {
+        "description": "En h\u00e4rlig gr\u00f6nsakssoppa med goda tillbeh\u00f6r som serveras i sk\u00e5lar\n        bredvid.",
+        "isVeg": true,
+        "thumbnail": "gronsakssoppa-med-lackra-tillbehor.jpg",
+        "title": "Gr\u00f6nsakssoppa med l\u00e4ckra tillbeh\u00f6r",
+        "url": "http://www.koket.se/michael_bjorklund/soppor_och_grytor/gronsaker__potatis_och_andra_rotfrukter/gronsakssoppa_med_lackra_tillbehor/"
+    },
+    {
+        "description": "Jag \u00e4lskar det h\u00e4r receptet, det \u00e4r l\u00e4tt, gott, smarrig och g\u00e5r\n        fort. Jag har snott det fr\u00e5n Emma \u00e5 nu g\u00f6r jag det igen. F\u00f6r det\n        t\u00e5ls att lagas igen, och igen, och igen, och igen.... /Anette\n        Rosvall",
+        "isVeg": true,
+        "thumbnail": "squashbiffar.jpg",
+        "title": "Squashbiffar",
+        "url": "http://www.koket.se/anette_rosvall_och_emma_hamberg/varmratter/gronsaker__potatis_och_andra_rotfrukter/squashbiffar/"
+    },
+    {
+        "description": "En vegetarisk r\u00e4tt som blir matigare om n\u00e5gra skivor god skinka\n        eller rostbiff serveras till. Anv\u00e4nd g\u00e4rna en f\u00e4rdiggjord sm\u00f6rdeg\n        om ni inte hinner g\u00f6ra pajdegen.",
+        "isVeg": true,
+        "thumbnail": "paj-med-svamp-och-gronsaksfyllning.jpg",
+        "title": "Paj med svamp- och gr\u00f6nsaksfyllning",
+        "url": "http://www.koket.se/paj-med-svamp-och-gronsaksfyllning"
+    },
+    {
+        "description": "Mina gullungars favoritsoppa, h\u00e4lsar Jacob Wismar.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Kr\u00e4mig blomk\u00e5lssoppa",
+        "url": "http://www.koket.se/jacob_wismar/soppor_och_grytor/potatis_och_andra_rotfruker/kramig_blomkalssoppa/"
+    },
+    {
+        "description": "En f\u00e4rgglad, vacker och smakrik couscoussallad med granat\u00e4pple.\n        Gott till grillat eller p\u00e5 buff\u00e9n.",
+        "isVeg": true,
+        "thumbnail": "couscoussallad-vego.jpg",
+        "title": "Couscoussallad vego",
+        "url": "http://www.koket.se/buffe---helt-enkelt/jon-hansson/couscoussallad-vego/"
+    },
+    {
+        "description": "Receptet p\u00e5 vegetarisk ganesh babu r\u00e4cker till 4 personer.",
+        "isVeg": true,
+        "thumbnail": "placeholder.png",
+        "title": "Vegetarisk ganesh babu",
+        "url": "http://www.koket.se/karim_razaul/vamratter/gronsaker_potatis_och_andra_rotfrukter/vegetarisk_ganesh_babu/"
+    },
+    {
+        "description": "Receptet p\u00e5 potatis- och blomk\u00e5lscurry r\u00e4cker till 4\n        personer.",
+        "isVeg": true,
+        "thumbnail": "vegetarisk-curry-pa-potatis-och-blomkal.jpg",
+        "title": "Vegetarisk curry p\u00e5 potatis och blomk\u00e5l",
+        "url": "http://www.koket.se/malin_soderstrom/soppor_och_grytor/gronsaker/vegetarisk_curry_pa_potatis_och_blomkal/"
+    },
+    {
+        "description": "Superfoodpizza med bl\u00e5b\u00e4r och hasseln\u00f6tspesto.",
+        "isVeg": true,
+        "thumbnail": "rodbetsdrom.jpg",
+        "title": "R\u00f6dbetsdr\u00f6m",
+        "url": "http://www.koket.se/halv-atta-hos-mig/niki---stockholm/rodbetsdrom/"
+    },
+    {
+        "description": "V\u00e4rmande och kr\u00e4mig gr\u00f6nsaksgrat\u00e4ng med rotfrukter, svamp och gr\u00f6nk\u00e5l. Servera g\u00e4rna med en stor sallad.",
+        "isVeg": true,
+        "thumbnail": "varmande-gronsaksgratang.jpg",
+        "title": "Rotfruktsgrat\u00e4ng med svamp och gr\u00f6nk\u00e5l",
+        "url": "http://www.koket.se/varmande-gronsaksgratang"
+    },
+    {
+        "description": "Clintonburgare k\u00e4nns aningens mer sofistikerad och med ganska mycket gr\u00f6nt men framf\u00f6rallt s\u00e5 d\u00f6ljer den n\u00e5got exklusivt. Och s\u00e5klart \u00e4r mexikanska influenser v\u00e4lkomna h\u00e4r.\u00a0Tryffelsp\u00e4ckad kalvf\u00e4rsburgare med krispig sallad, friterad l\u00f6k, tomatsalsa och dragoncr\u00e8me.",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Clintonburgare",
+        "url": "http://www.koket.se/clintonburgare"
+    },
+    {
+        "description": "Pasta bolognese p\u00e5 bara 20 minuter? Javisst!\u00a0",
+        "isVeg": false,
+        "thumbnail": "supersnabb-pasta-bolognese-med-spenat-och-paremsanpasta.jpg",
+        "title": "Supersnabb pasta bolognese med spenat- och parmesanpasta",
+        "url": "http://www.koket.se/supersnabb-pasta-bolognese-med-spenat-och-parmesanpasta"
+    },
+    {
+        "description": "Vardagslyx p\u00e5 Tom Sj\u00f6stedts vis! Smakrika j\u00e4rpar, ljuvlig gr\u00e4dds\u00e5s, picklade svarta vinb\u00e4r och sparrispotatis.",
+        "isVeg": false,
+        "thumbnail": "oxjarpar-med-graddsas-och-picklade-vinbar.jpg",
+        "title": "Oxj\u00e4rpar med gr\u00e4dds\u00e5s och picklade vinb\u00e4r",
+        "url": "http://www.koket.se/oxjarpar-med-graddsas-och-picklade-vinbar"
+    },
+    {
+        "description": "Spela klippet f\u00f6r att se hur Jennie Walld\u00e9n p\u00e5 ett snabbt och enkelt s\u00e4tt fixar \u00f6ver 100 k\u00f6ttbullar.",
+        "isVeg": false,
+        "thumbnail": "spritsade-kottbullar-i-ugn-se-gor.jpg",
+        "title": "Spritsade k\u00f6ttbullar i ugn - se & g\u00f6r",
+        "url": "http://www.koket.se/spritsade-kottbullar-i-ugn-se-gor"
+    },
+    {
+        "description": "Jakten p\u00e5 v\u00e4rldens b\u00e4sta hamburgare \u00e4r st\u00e4ndigt p\u00e5g\u00e5ende. Enligt Tom Sj\u00f6stedt kan du avsluta den, f\u00f6r den \u00e4r en myt! Men vi v\u00e5gar lova att denna burgare kommer s\u00e5 n\u00e4ra som det g\u00e5r, och att den inte kommer g\u00f6ra dig besviken.\u00a0",
+        "isVeg": false,
+        "thumbnail": "varldens-basta-burgare-2.jpg",
+        "title": "V\u00e4rldens n\u00e4st b\u00e4sta burgare",
+        "url": "http://www.koket.se/varldens-nast-basta-burgare"
+    },
+    {
+        "description": "N\u00e4stan alla gillar k\u00f6ttbullssm\u00f6rg\u00e5sar! Och det \u00e4r nog den enklaste picknicken du kan g\u00f6ra - som dessutom g\u00e5r att pimpa i all o\u00e4ndlighet med just dina favoritingredienser. G\u00f6r egna k\u00f6ttbullar eller k\u00f6p Felix f\u00e4rdiga, ekologiska k\u00f6ttbullar.",
+        "isVeg": false,
+        "thumbnail": "felix-kottbullssmorgas-picknick.jpg",
+        "title": "Picknicksm\u00f6rg\u00e5s med k\u00f6ttbullar, dressing & rostad l\u00f6k",
+        "url": "http://www.koket.se/picknicksmorgas-med-kottbullar-dressing-rostad-lok"
+    },
+    {
+        "description": "Kryddig och knaperstekt fl\u00e4skf\u00e4rs som serveras i salladsblad tillsammans med mynta, koriander, salladsl\u00f6k och jordn\u00f6tter.",
+        "isVeg": false,
+        "thumbnail": "asiatiska-salladsrullar-med-knaperstekt-flaskfars.jpg",
+        "title": "Asiatiska salladsrullar med knaperstekt fl\u00e4skf\u00e4rs",
+        "url": "http://www.koket.se/asiatiska-salladsrullar-med-knaperstekt-flaskfars"
+    },
+    {
+        "description": "S\u00e5 mycket godare \u00e4n man n\u00e5gonsin kan tro, en helt beroendeframkallande sallad!",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Vietnamesisk \u00e4ggsallad med knaperstekt fl\u00e4sk",
+        "url": "http://www.koket.se/vietnamesisk-aggsallad-med-knaperstekt-flask"
+    },
+    {
+        "description": "Yakiniku gjord p\u00e5 blandf\u00e4rs \u00e4r en perfekt vardagsr\u00e4tt som g\u00e5r hem hos barn som vuxna.",
+        "isVeg": false,
+        "thumbnail": "snabblagad-yakiniku-med-ris.jpg",
+        "title": "Snabblagad yakiniku med ris",
+        "url": "http://www.koket.se/snabblagad-yakiniku-med-ris"
+    },
+    {
+        "description": "Lyxig pastar\u00e4tt med hemgjord \u00f6rt- och hasseln\u00f6tspesto, stekt lammf\u00e4rs och varma tomater.",
+        "isVeg": false,
+        "thumbnail": "pasta-med-lammfars-och-ramsloks-och-hasselnotspesto.jpg",
+        "title": "Pasta med lammf\u00e4rs och ramsl\u00f6ks- och hasseln\u00f6tspesto",
+        "url": "http://www.koket.se/pasta-med-lammfars-och-ramsloks-och-hasselnotspesto"
+    },
+    {
+        "description": "Smidiga ugnsbakade k\u00f6ttbullar i tomats\u00e5s som blir riktigt smarrig av\u00a0parmesan, rosmarin och mozzarella. Varieras med b\u00f6npasta och sallad p\u00e5 svartk\u00e5l och zucchini.",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Italienska k\u00f6ttbullar i tomats\u00e5s med b\u00f6npasta och svartk\u00e5l- och zuccinisallad",
+        "url": "http://www.koket.se/italienska-kottbullar-i-tomatsas-med-parmesan-rosmarin-mozzarella-samt-en-svartkal-zuccinisallad"
+    },
+    {
+        "description": "Woken med vitk\u00e5l, mor\u00f6tter, morot och k\u00f6ttf\u00e4rs g\u00f6r dig b\u00e5de m\u00e4tt och v\u00e4ldigt glad f\u00f6r en billig penning.",
+        "isVeg": false,
+        "thumbnail": "kottfarswok.jpg",
+        "title": "K\u00f6ttf\u00e4rswok",
+        "url": "http://www.koket.se/kottfarswok"
+    },
+    {
+        "description": "L\u00e4ckra k\u00f6ttbullar som g\u00f6rs p\u00e5 n\u00f6tf\u00e4rs, r\u00f6dbetor och v\u00e4sterbottensost.\u00a0",
+        "isVeg": false,
+        "thumbnail": "kottbullar-med-rodbetor-och-vasterbottensost.jpg",
+        "title": "K\u00f6ttbullar med r\u00f6dbetor och v\u00e4sterbottensost",
+        "url": "http://www.koket.se/kottbullar-med-rodbetor-och-vasterbottensost"
+    },
+    {
+        "description": "L\u00e4ckra lammf\u00e4rsbullar med mynta och sumac serveras tillsammans med en fruktig grynssallad. Serveras r\u00e4tten som en del av ett julbord r\u00e4cker den till 10 portioner.",
+        "isVeg": false,
+        "thumbnail": "orientaliska-lammfarsbullar.jpg",
+        "title": "Orientaliska lammf\u00e4rsbullar",
+        "url": "http://www.koket.se/orientaliska-lammfarsbullar"
+    },
+    {
+        "description": "\u2028Kalvf\u00e4rsbullar med salvia, l\u00f6k och kanel. Ett roligt alternativ till de klassiska k\u00f6ttbullarna p\u00e5 julbordet.",
+        "isVeg": false,
+        "thumbnail": "poons-julkottbullar.jpg",
+        "title": "Poons julk\u00f6ttbullar",
+        "url": "http://www.koket.se/poons-julkottbullar"
+    },
+    {
+        "description": "Fuskpicklad r\u00f6dl\u00f6k och lite ost s\u00e4tter piff p\u00e5 lammf\u00e4rsburgaren med\u00a0spr\u00f6da ugnsstekta \u201dchips\u201d.",
+        "isVeg": false,
+        "thumbnail": "lammfarsburgare-med-picklad-rodlok.jpg",
+        "title": "Lammf\u00e4rsburgare med picklad r\u00f6dl\u00f6k",
+        "url": "http://www.koket.se/lammfarsburgare-med-picklad-rodlok"
+    },
+    {
+        "description": "Saftig stuffing med l\u00f6k, kycklinglever och chorizo eller fl\u00e4skf\u00e4rs att fylla kalkonen med till Thanksgiving-middagen.\u00a0",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Stuffing till kalkon",
+        "url": "http://www.koket.se/stuffing-till-kalkon"
+    },
+    {
+        "description": "Biffar p\u00e5 \u00e4lgf\u00e4rs, en smakrik och kr\u00e4mig gr\u00e4dds\u00e5s och syltade kantareller. Serveras med mandelpotatis, g\u00e4rna med skalet kvar.",
+        "isVeg": false,
+        "thumbnail": "algkottbullar-med-graddsas-och-syltade-kantareller-2.jpg",
+        "title": "\u00c4lgk\u00f6ttbullar med gr\u00e4dds\u00e5s och syltade kantareller",
+        "url": "http://www.koket.se/algkottbullar-med-graddsas-och-syltade-kantareller"
+    },
+    {
+        "description": "Klassikern parisare g\u00f6rs h\u00e4r p\u00e5 dovhjortsytterfil\u00e9 och serveras med syltade gr\u00f6na tomater och brynt l\u00f6k.",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Parisare p\u00e5 dovhjort",
+        "url": "http://www.koket.se/parisare-pa-dovhjort"
+    },
+    {
+        "description": "Saftiga lammf\u00e4rsbiffar som fylls med fetaost och oliver, servera med kr\u00e4mig tzatziki och citronrostad potatis.",
+        "isVeg": false,
+        "thumbnail": "grekiska-lammfarsbiffar-med-fetaost.jpg",
+        "title": "Grekiska lammf\u00e4rsbiffar med fetaost",
+        "url": "http://www.koket.se/grekiska-lammfarsbiffar-med-fetaost"
+    },
+    {
+        "description": "K\u00f6ttf\u00e4rstacos \u00e4r ofta dissade av dem som \u201dhar koll\u201d och som kanske har varit i USA eller Mexico och \u00e4tit \u201driktiga\u201d tacos. Hur som helst, f\u00f6r oss som h\u00e5ller fast vid k\u00f6ttf\u00e4rsen och inte sk\u00e4ms f\u00f6r det \u2013 h\u00e4r \u00e4r en pimpad variant att impa med. K\u00f6p lite finare k\u00f6ttf\u00e4rs med h\u00f6gre fetthalt, g\u00e4rna p\u00e5 25\u201330 %!\r",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Lite finare svennetacos med k\u00f6ttf\u00e4rs och guajillochili",
+        "url": "http://www.koket.se/lite-finare-svennetacos-med-kottfars-och-guajillochili"
+    },
+    {
+        "description": "Tom Sj\u00f6stedt kan konsten att g\u00f6ra en riktigt god och saftig hamburgare. Hemligheten \u00e4r god n\u00f6tf\u00e4rs, mycket ost, och tv\u00e5 sorters l\u00f6k.",
+        "isVeg": false,
+        "thumbnail": "cheeseburgare-med-tva-sorters-lok.jpg",
+        "title": "Cheeseburgare med tv\u00e5 sorters l\u00f6k",
+        "url": "http://www.koket.se/cheeseburgare-med-tva-sorters-lok"
+    },
+    {
+        "description": "Marockansk lammgryta med k\u00f6ttbullar i kryddig tomats\u00e5s. Servera\n        med couscous, mandel och harissa.",
+        "isVeg": false,
+        "thumbnail": "marockanska-lammfarsbullar-med-couscous.jpg",
+        "title": "Marockanska lammf\u00e4rsbullar med couscous",
+        "url": "http://www.koket.se/mitt-kok/jennie-wallden/marockanska-lammfarsbullar-med-couscous"
+    },
+    {
+        "description": "Superenkel middag med fetaostfyllda pannbiffar och sm\u00f6rstekt purjol\u00f6k.",
+        "isVeg": false,
+        "thumbnail": "ostfyllda-pannbiffar.jpg",
+        "title": "Ostfyllda pannbiffar",
+        "url": "http://www.koket.se/mitt-kok/lisa-lemke/ostfyllda-pannbiffar"
+    },
+    {
+        "description": "Burritos med k\u00f6ttf\u00e4rs och hemgjord tacokrydda. Gratinera i ugnen\n        med riven ost.",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Ostgratinerade burritos med k\u00f6ttf\u00e4rs",
+        "url": "http://www.koket.se/nyhetsmorgon/jonas-lundgren/ostgratinerade-burritos-med-kottfars/"
+    },
+    {
+        "description": "K\u00f6ttbullar i en ny, kryddigare tappning. Servera med couscous\n        och syrlig limeyoghurt. Perfekt vardagsmiddag!",
+        "isVeg": false,
+        "thumbnail": "kryddiga-kottbullar-med-couscous-och-limeyoghurt.jpg",
+        "title": "Kryddiga k\u00f6ttbullar med couscous och limeyoghurt",
+        "url": "http://www.koket.se/mitt-kok/tom-sjostedt/kryddiga-kottbullar-med-couscous-och-limeyoghurt/"
+    },
+    {
+        "description": "Paolo Robertos stora, saftiga k\u00f6ttbullar i tomats\u00e5s serveras sj\u00e4lvklart med pasta. God och enkel vardagsr\u00e4tt som \u00e4r popul\u00e4r hos barn.",
+        "isVeg": false,
+        "thumbnail": "spaghetti-med-stora-kottbullar-i-tomatsas.jpg",
+        "title": "Spaghetti med stora k\u00f6ttbullar i tomats\u00e5s",
+        "url": "http://www.koket.se/mitt-kok/paolo-roberto/spaghetti-med-stora-kottbullar-i-tomatsas/"
+    },
+    {
+        "description": "Glutenfri paj med fyllning p\u00e5 k\u00f6ttf\u00e4rs, soltorkade tomater ocholiver. OBS! Om du anv\u00e4nder havregryn m\u00e4rkt med \"ren havre\" blirpajen glutenfri - vanliga havregryn kan inneh\u00e5lla sp\u00e5r av andras\u00e4desslag. Titta p\u00e5 klippet f\u00f6r att se hur du g\u00f6r.",
+        "isVeg": false,
+        "thumbnail": "hur-gor-man-glutenfri-kottfarspaj.jpg",
+        "title": "Hur g\u00f6r man glutenfri k\u00f6ttf\u00e4rspaj?",
+        "url": "http://www.koket.se/se-och-gor/caroline-ahlqvist/hur-gor-man-glutenfri-kottfarspaj-/"
+    },
+    {
+        "description": "En snabbvariant p\u00e5 chiligryta med lammf\u00e4rs, svarta b\u00f6nor, getost\n        och nachochips.",
+        "isVeg": false,
+        "thumbnail": "placeholder.png",
+        "title": "Chili med lammf\u00e4rs och svarta b\u00f6nor",
+        "url": "http://www.koket.se/nyhetsmorgon/jonas-borssen/chili-med-lammfars-och-svarta-bonor/"
+    },
+    {
+        "description": "Spaghetti gjord p\u00e5 mor\u00f6tter \u00e4r ett j\u00e4ttebra alternativ om du vill dra ned p\u00e5 kolhydrater och/eller vitt mj\u00f6l. Serveras med en superenkel k\u00f6ttf\u00e4rss\u00e5s",
+        "isVeg": false,
+        "thumbnail": "morotsspaghetti-med-kottfarssas.jpg",
+        "title": "Morotsspaghetti med k\u00f6ttf\u00e4rss\u00e5s",
+        "url": "http://www.koket.se/nyhetsmorgon/annika-sjoo/morotsspaghetti-med-kottfarssas/"
+    },
+    {
+        "description": "Lyxig lasagne med tre olika sorters ost. Ett m\u00e5ste f\u00f6r ost\u00e4lskaren, helt enkelt!",
+        "isVeg": false,
+        "thumbnail": "lasagne-med-tre-sorters-ost.jpg",
+        "title": "Lasagne med tre sorters ost",
+        "url": "http://www.koket.se/mitt-kok/donal-skehan/lasagne-med-tre-sorters-ost/"
+    },
+    {
+        "description": "K\u00f6ttf\u00e4rss\u00e5s med mor\u00f6tter, selleri och r\u00f6tt vin. Gott och enkelt!",
+        "isVeg": false,
+        "thumbnail": "kottfarssas-och-spaghetti.jpg",
+        "title": "Klassisk k\u00f6ttf\u00e4rss\u00e5s med spaghetti",
+        "url": "http://www.koket.se/mitt-kok/jennie-wallden/klassisk-kottfarssas-med-spaghetti/"
+    },
+    {
+        "description": "Koreanska k\u00f6ttbullar kryddade med soja och fisks\u00e5s. Ett kul\n        alternativ till de klassiska k\u00f6ttbullarna.",
+        "isVeg": false,
+        "thumbnail": "koreanska-kottbullar.jpg",
+        "title": "Koreanska k\u00f6ttbullar",
+        "url": "http://www.koket.se/mitt-kok/jennie-wallden/koreanska-kottbullar/"
+    },
+    {
+        "description": "Tiden d\u00e5 vi bara \u00e5t tacos p\u00e5 fredagar \u00e4r f\u00f6rbi... Testa Tommys\n        m\u00e5ndagstacos med hemgjord tacokrydda, stekt ananas och\n        tomatsalsa.",
+        "isVeg": false,
+        "thumbnail": "hemkryddad-tacos-med-stekt-ananas.jpg",
+        "title": "Hemkryddad tacos med stekt ananas",
+        "url": "http://www.koket.se/mitt-kok/tommy-myllymaki/hemkryddad-tacos-med-stekt-ananas/"
+    },
+    {
+        "description": "Tommy Myllym\u00e4kis recept p\u00e5 v\u00e4rldens godaste hamburgare gjorda p\u00e5 h\u00f6grevsf\u00e4rs, sm\u00e4lt ost och hemslagen majonn\u00e4s.",
+        "isVeg": false,
+        "thumbnail": "tommy-myllymakis-saftiga-cheeseburgare.jpg",
+        "title": "Tommy Myllym\u00e4kis saftiga cheeseburgare",
+        "url": "http://www.koket.se/mitt-kok/tommy-myllymaki/tommy-myllymakis-saftiga-cheeseburgare/"
+    },
+    {
+        "description": "Sugen p\u00e5 att f\u00f6rnya en klassiker? Testa att laga denna variant\n        p\u00e5 k\u00f6ttf\u00e4rss\u00e5s med fl\u00e4skf\u00e4rs, mynta och vitt vin. Extra bonus att\n        fl\u00e4skf\u00e4rs ofta \u00e4r billigare \u00e4n vanlig n\u00f6t- eller blandf\u00e4rs.",
+        "isVeg": false,
+        "thumbnail": "pasta-med-flaskfars-mynta-och-vitt-vin.jpg",
+        "title": "Pasta med fl\u00e4skf\u00e4rs, mynta och vitt vin",
+        "url": "http://www.koket.se/mitt-kok/paolo-roberto/pasta-med-flaskfars--mynta-och-vitt-vin/"
+    },
+    {
+        "description": "En riktig klassiker \u00e4r k\u00f6ttbullar med mos och lingon. H\u00e4r bjuder stj\u00e4rnkocken Tommy Myllym\u00e4ki p\u00e5 sitt goda recept.",
+        "isVeg": false,
+        "thumbnail": "kottbullar-med-potatismos-och-lingon.jpg",
+        "title": "K\u00f6ttbullar med potatismos och lingon",
+        "url": "http://www.koket.se/mitt-kok/tommy-myllymaki/kottbullar-med-potatismos-och-lingon/"
+    },
+    {
+        "description": "Smarriga lammf\u00e4rsbiffar som fylls med v\u00e4sterbottensost. Till\n        serveras grillad sparris samt en creme fraiche-s\u00e5s med ramsl\u00f6k och\n        vitl\u00f6k.",
+        "isVeg": false,
+        "thumbnail": "lammfarsbiffar-med-ost-ramslokssas-och-grillad-sparris.jpg",
+        "title": "Lammf\u00e4rsbiffar med ost, ramsl\u00f6kss\u00e5s och grillad sparris",
+        "url": "http://www.koket.se/mitt-kok/mikael-bjorklund/lammfarsbiffar-med-ost--ramslokssas-och-grillad-sparris/"
+    },
+    {
+        "description": "H\u00f6grevsburgare med salsa gjord p\u00e5 ananas, paprika, chili och\n        koriander. Toppas med chilimajonn\u00e4s, \u00e4gg och avokado.",
+        "isVeg": false,
+        "thumbnail": "hamburgare-med-ananassalsa-och-chilimajonnas.jpg",
+        "title": "Hamburgare med ananassalsa och chilimajonn\u00e4s",
+        "url": "http://www.koket.se/mitt-kok/jennie-wallden/hamburgare-med-ananassalsa-och-chilimajonnas/"
+    },
+    {
+        "description": "Krispiga v\u00e5rrullar fyllda med k\u00f6ttf\u00e4rs, morot, vitk\u00e5l och glasnudlar. Servera med sojas\u00e5s och sweet chili.",
+        "isVeg": false,
+        "thumbnail": "krispiga-varrullar-med-tva-dippsaser.jpg",
+        "title": "Krispiga v\u00e5rrullar med tv\u00e5 dipps\u00e5ser",
+        "url": "http://www.koket.se/halv-atta-hos-mig/sara---stockholm/krispiga-varrullar-med-tva-dippsaser/"
+    }
+]
