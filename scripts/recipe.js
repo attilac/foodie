@@ -24,6 +24,6 @@ Recipe.prototype.updateView = function (element) {
 	recipeHeading.innerHTML = this.title;
 	recipeDesc.innerHTML = this.description;
 	recipeUrl.href = this.url;
-	recipeThumb.innerHTML = '<img class="img-circle img-responsive" src="' + 'images/' + this.thumbnail + '" alt=""/>';
+	recipeThumb.innerHTML = '<img class="img-circle img-responsive" src="' + 'images/' + this.thumbnail + '" alt="' + this.title + '"/>';
 };
 //# sourceMappingURL=recipe.js.map
