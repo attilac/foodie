@@ -19,12 +19,15 @@ function refreshHandler(event) {
 	console.log(event);
 	var targetElement = document.getElementById(this.dataset.target);
 
-	if (Modernizr.csstransitions) {
-		//console.log('Modernizr');	
+	if (Modernizr.csstransitions && Modernizr.hasEvent('transitionend', window)) {
+		//console.log(Modernizr.hasEvent('transitionend', window));	
 		transitionOut(targetElement);
 	} else {
 		var recipe = recipeList.getnextRecipe();
 		recipe.updateView(targetElement);
+		if (event.target.classList.contains('first')) {
+			removeClass(event.target, 'first');
+		}
 	}
 }
 
