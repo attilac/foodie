@@ -6,7 +6,7 @@ Fend16, Nackademin
 Sidan visar en ny slumpad maträtt varje gång man klickar på en knapp.  
 Det finns ett alternativ där man kan välja att visa enbart vegetariska alternativ.  
 Datan kommer från en JSON-fil.  
-Istället för att slumpa en maträtt varje gång man trycker på uppdateraknappen, blandas ordningen på hela listan varje gång man väljer vegetariskt alternativ. Uppdateraknappen stegar igenom listan sen. Detta val gjordes för att det skulle gå längre tid för att komma till samma alternativ flera gånger. 
+Istället för att slumpa en maträtt varje gång man trycker på uppdateraknappen, blandas ordningen på hela listan varje gång man trycker på checkboxen vegetariskt. Då filtereras också listan på vegetarisk (eller icke vegetarisk). Uppdateraknappen fungerar sen som en next-knap och stegar igenom listan. Detta val gjordes för att det skulle gå längre tid mellan att komma tillbaka till samma alternativ. 
 
 
 Länk [attilac.github.io/foodie/](https://attilac.github.io/foodie/)
